@@ -1,0 +1,300 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: "Californian FB", sans-serif;
+    box-sizing: border-box;
+}
+
+/*Make the slide more smooth*/
+html {
+    scroll-behavior: smooth;
+}
+
+::selection {
+    background-color: black;
+}
+
+/*Set the color of the scroll to make the scroll bar more consistent with the style of the entire web page*/
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: gray;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: black;
+}
+
+/* set navagation's detail*/
+.nav {
+    position: fixed;
+    background-color: black;
+    width: 100%;
+    padding: 30px 0;
+    top: 0;
+    z-index: 999;
+    transition: .3s linear;
+}
+
+.ind {
+    max-width: 1300px;
+    margin: auto;
+    padding: 0 40px;
+}
+
+.nav .ind {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*Set the logo on the navigation bar*/
+.logo {
+    width: 35px;
+    height: 30px;
+    background-image: url(../img/NBA%20unveils%2075th%20anniversary%20season%20logo.png);
+    background-size: contain;
+}
+
+.menu-b {
+    background: none;
+    width: 30px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    outline: none;
+    z-index: 999;
+    display: none;
+}
+
+.menu-b span {
+    display: block;
+    height: 3px;
+    background-color: #fff;
+    margin: 6px 0;
+    position: relative;
+    transition: .3s linear;
+}
+
+.nav-menu a {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    margin-left: 30px;
+}
+
+#text {
+    color: #48dbfb;
+    font-size: 80px;
+}
+
+#home {
+    height: 150vh;
+    min-height: 500px;
+    background: url(../img/Full%20NBA%2075%20Photo%20%F0%9F%92%8E.jpeg) no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#home .ind {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+}
+
+#home .content {
+    width: 100%;
+    color: white;
+}
+
+#home .content h1 {
+    font-size: 60px;
+    margin-bottom: 60px;
+}
+
+
+
+section {
+    padding: 100px 0;
+    background-color: #f1f1f1;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 80px;
+    position: relative;
+    font-size: 26px;
+    padding-bottom: 20px;
+    color: #111;
+}
+
+.section-header::before {
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 3px;
+    background-color: #111;
+    bottom: 0;
+    left: calc(50% - 40px);
+}
+
+.section-header::after {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 10px;
+    left: calc(50% - 12px);
+    bottom: -7px;
+}
+
+
+dark.section-header {
+    color: white;
+}
+
+#gallery {
+    background-color: black
+}
+
+.gallerys {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.gallery {
+    width: calc(33% - 10px);
+    position: relative;
+    overflow: hidden;
+    border-radius: 6px;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.gallery img {
+    width: 100%;
+    height: 100%;
+    transition: .3s linear;
+}
+
+.gallery::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: #48dbfbcc;
+    transition: .2s linear;
+    opacity: 0;
+    transform: scale(0);
+}
+
+.gallery .info {
+    position: absolute;
+    z-index: 2;
+    bottom: 40px;
+    left: 40px;
+    color: #fff;
+    transition: .4s linear;
+    opacity: 0;
+}
+
+/*But when the mouse moves over the image, it tilts by 15 degrees*/
+.gallery:hover img {
+    transform: scale(1.6) rotate(15deg);
+}
+
+.gallery:hover::before,
+.gallery:hover .info {
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+/*Set the button's properties*/
+.up {
+    position: fixed;
+    z-index: 100;
+    background-color: navy;
+    border-radius: 5px;
+    cursor: pointer;
+    color: red;
+    bottom: 50px;
+    right: 50px;
+    width: 50px;
+    height: 70px;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font: normal 16px/1.5 "Helvetica Neue", sans-serif;
+    background: black;
+    color: #fff;
+    overflow-x: hidden;
+    padding-bottom: 50px;
+}
+
+
+
+.intro {
+    background: #456990;
+    padding: 100px 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    color: aliceblue;
+}
+
+
+.hall-main {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.hall-pic {
+    width: 300px;
+    border-radius: 50%;
+    margin-right: 100px;
+}
+
+.hall-text {
+    flex: 1;
+    color: black;
+}
+
+.hall-text p {
+    font-size: 17px;
+    text-align: justify;
+    line-height: 26px;
+    margin-top: 20px;
+}
+
+/*.container {
+    display: grid;
+
+    grid-template-columns: repeat(12, 1fr);
+
+    grid-auto-rows: minmax(100px, auto);
+
+    grid-template-areas:
+        ". . . . . header2 . . . . ."
+
+        ". . . . . main . . . . ."
+
+        ". . . . . footer . . . . .";
+
+}*/
